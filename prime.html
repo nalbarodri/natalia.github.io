@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+body{
+		background-color: lightgray;
+}
+
+h1{
+		color: white;
+		text-align:center;
+}
+
+p{
+		font-family:verdana;
+		font-size: 20px;
+}
+</style>
+</body>
+
+<head>
+		<title>
+				Check if number is prime with javascript
+		</title>
+		
+		<script type="text/javascript">
+		
+				//function to check prime number
+				function p() {
+						var n, i, flag = true;
+						
+						//getting the value form text
+						//field using DOM
+						n = document.myform.n.value;
+						n = parseInt(n)
+						for(i=2; i<=n-1; i++)
+								if (n%i==0) {
+										flag = false;
+										break;
+								}
+								
+								
+								//Check and display alert message
+							if (flag == true)
+									alert(n + " is prime");
+							else
+									alert(n + " is not prime");
+					}
+				</script>
+</head>
+
+<body>
+		<center>
+				<h1></h1>
+				
+				<h4>Prime number checker</h4>
+				
+				<hr color="violet">
+				
+				<form name="myform">
+						Enter number to check:
+						<input type="text" name=n value="">
+						
+						<br><br>
+						
+						<input type="button" value="check" onClick="p()">
+						<br>
+				</form>
+		</center>
+</body>
+</html>
+				
